@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+    --letra: #5f545c;
+    --button: #b1cab3;
+    --hover: #f3d79b;
+    --fundo-html: #fff4dd;
+    --mensagens: #f3d9a1;
+    --inicio: #b1cab3;
+    --nome: #f0cb7c;
+  }
+
+html {
+    background-color: var(--fundo-html);
+}
+
+.feed {
+    text-align: center;
+    padding: 8px;
+    margin: 1px 50px 10px 50px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--inicio);
+    box-shadow: 0 0 0.2em var(--letra);
+}
+
+.nome {
+    margin: 2% 20% 0 20%;
+    width: 40vh;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--nome);
+    transition: .5s;
+}
+
+.nome img {
+    margin-right: 5px;
+    max-width: 5vh;
+}
+
+.nome:hover {
+    transition: .5s;
+    background-color: var(--button);
+
+}
+
+.mensagem {
+    margin: 0 20% 2% 20%;
+    padding: 20px  20px 20px 10px;
+    border-radius: 0 10px 10px 10px;
+    background-color: var(--mensagens);
+    box-shadow: 0 0 0.2em var(--letra);
+    transition: .5s;
+}
+.mensagem:hover {
+    transition: .5s;
+    background-color: var(--inicio);
+}
+
+
+
+img {
+    min-width: none;
+    border-radius: 10px;
+    max-width: 20%;
+    box-shadow: 0 0 0.2em var(--letra);
+}
+
+.submit {
+    margin: 0 10% 0 10%;
+    text-align: center;
+}
+
+.inputmsg {
+    margin-top: 2%;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    width: 84%;
+    height: 15vh; 
+    background-color: var(--mensagens);
+    transition: .3s;
+    box-shadow: 0 0 0.2em var(--letra);
+    
+}
+.inputmsg:hover {
+    transition: .3s;
+    background-color: var(--nome);  
+}
+.inputmsg:focus {
+    border: 2px solid var(--inicio);
+    box-shadow: 0 0 0.2em var(--letra);
+    outline-offset: 0px;
+    outline: none;
+    
+}
+
+.enviar {
+    text-align: center;
+}
+
+.botao {
+    width: 20%;
+    height: 8vh; 
+    margin-top: 2px;
+    border-radius: 0 0 10px 10px;
+    border-style: none;
+    background-color: var(--button);
+    color: var(--letra);
+    transition: .3s;
+    box-shadow: 0 0 0.2em var(--letra);
+}
+.botao:hover {
+    transform: .3s;
+    background-color: var(--hover);
+}
+ 
+
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    padding: 15px 5%;
+    width: 100%;
+    background-color: var(--button);
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    color: #5f545c;
+    transition: .3s;
+    box-shadow: 0 0 0.2em var(--letra);
+}
+
+label:hover {
+    transform: .3s;
+    background-color: var(--hover);
+}
+ 

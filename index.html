@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar</title>
+  <link rel="stylesheet" href="css/login.css" />
+
+</head>
+
+<body>
+  <div>
+    <a href="pages/sobre.html"><img src="img/xsocial.png" alt="Social X"></a>
+  </div>
+
+  <form action="php/login.php" method="POST">
+    <div class="login">
+      <div class="conteudo">
+        <div class="espaco">
+          <input type="email" name="email" placeholder="E-mail" minlength="12" maxlength="80" required>
+        </div>
+        <div class="espaco">
+          <input type="password" name="senha" placeholder="Senha" minlength="6" maxlength="80" required>
+        </div>
+        <div class="espaco">
+          <button type="submit" value="entrar" name="entrar">Entrar</button>
+        </div>
+        <div class="espaco">
+          <a href="#" onclick="openModal('dv-modal1')">Esqueceu a senha?</a>
+        </div>
+        <hr>
+        <div class="espaco">
+          <a href="#" onclick="openModal('dv-modal')">Cadastrar</a>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+  <form enctype="multipart/form-data" action="php/cadastro.php" method="POST">
+    <div id="dv-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>Cadastro</h1>
+        </div>
+        <div class="modal-body">
+          <div class="espaco">
+            <input name="nome" type="text" placeholder="Nome" minlength="2" maxlength="80" required>
+            <input name="sobrenome" type="text" placeholder="Sobrenome" minlength="2" maxlength="80" required>
+          </div>
+          <div class="espaco">
+            <input name="email" type="email" placeholder="E-mail" minlength="12" maxlength="80" required>
+          </div>
+          <div class="espaco">
+            <input name="senha" type="password" placeholder="Senha" minlength="6" maxlength="80" required>
+          </div>
+          <div class="espaco">
+            <input name="senha2" type="password" placeholder="Senha novamente" minlength="6" maxlength="80" required>
+          </div>
+          <div class="ddt">
+            <label>Data de nascimento</label>
+          </div>
+          <div class="espaco">
+            <input name="aniversario" type="date" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" name="cadastrar">Cadastrar</button>
+
+          <button type="reset" onclick="closeModal('dv-modal')">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div id="dv-modal1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Esqueceu a senha?</h1>
+      </div>
+      <div class="modal-body">
+
+        <div class="espaco">
+          <h3>Caso esqueça a senha, entre em contato com um de nossos atendentes pelo numero 3400-0000</h3>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('dv-modal1')">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/modal.js"></script>
+</body>
+
+</html>
+
